@@ -18,7 +18,6 @@ public class Trabajadores {
     private int cantidadDeHijos;
     
     private double incentivo;
-    private double sueldoTotal;
     
     //constructor
     public Trabajadores(){
@@ -36,27 +35,22 @@ public class Trabajadores {
         //1. Si el trabajador es de sexo Masculino y su edad es mayor a 45 años y no tiene hijos, se le incrementará el sueldo en un 10
         if(Character.compare(this.sexo, 'H')==0 && this.edad>45 && this.cantidadDeHijos==0){
             incentivo=this.sueldoBase*0.10;
-            sueldoTotal=sueldoBase+incentivo;
             
         //2. Si el trabajador es de sexo Masculino y su edad es mayor a 45 años y tiene hijos, se le incrementará el sueldo en un 18%
         }else if(Character.compare(this.sexo, 'H')==0 && this.edad>45 && this.cantidadDeHijos>0){
             incentivo=this.sueldoBase*0.18;
-            sueldoTotal=sueldoBase+incentivo;
         
         //3. Si el trabajador es de sexo Femenino, su edad es mayor a 40 y no tiene hijos, se le incrementará el sueldo en un 10%
         }else if(Character.compare(this.sexo, 'F')==0 && this.edad>40 && this.cantidadDeHijos==0){
             incentivo=this.sueldoBase*0.10;
-            sueldoTotal=sueldoBase+incentivo;
             
         //4. Si el trabajador es de sexo Femenino, su edad es mayor a 40 y tiene al menos 1 hijo, pero 3 o menos, se le incrementará el sueldo en un 20%
         }else if(Character.compare(this.sexo, 'F')==0 && this.edad>40 && this.cantidadDeHijos>=1 && this.cantidadDeHijos<=3){
             incentivo=this.sueldoBase*0.20;
-            sueldoTotal=sueldoBase+incentivo;
             
         //5. Si el trabajador es de sexo Femenino y tiene mas de 3 hijos, se le incrementará el sueldo en un 25%
         }else if(Character.compare(this.sexo, 'F')==0 && this.cantidadDeHijos>3){
             incentivo=this.sueldoBase*0.25;
-            sueldoTotal=sueldoBase+incentivo;
 
         }
   
