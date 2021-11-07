@@ -53,8 +53,7 @@ public class Trabajadores {
             incentivo=this.sueldoBase*0.25;
 
         }
-  
-        
+ 
         return 0;
     }
     
